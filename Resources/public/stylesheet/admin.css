@@ -286,7 +286,9 @@ button.btn-danger {
     -o-transition: none;
     transition: none;
 }
-.help-block {
+
+.help-block,
+.has-error .help-block {
     color: #797470;
 }
 
@@ -298,15 +300,33 @@ button.btn-danger {
     border-color: #D44542;
     box-shadow: none;
 }
-.has-error .help-block {
+.has-error .error-block {
     color: #D44542;
     font-weight: bold;
+    padding-top: 5px;
 }
-.has-error .help-block ul {
-    margin: 0;
+.has-error .error-block .label-danger {
+    margin-right: 3px;
 }
-.has-error  .help-block .glyphicon {
-    display: none;
+.has-error .error-block ul {
+    margin: .5em 0 .5em 1.5em;
+}
+.has-error .error-block ul li {
+    margin-bottom: .5em;
+}
+
+/* Modal windows
+   ------------------------------------------------------------------------- */
+.modal-dialog .modal-content {
+    border-radius: 0;
+}
+.modal-dialog .modal-content .modal-body h4 {
+    font-size: 21px;
+    margin: .5em 0;
+}
+.modal-dialog .modal-footer {
+    background: #F3EFEB;
+    margin-top: 1.5em;
 }
 
 /* -------------------------------------------------------------------------
@@ -612,6 +632,11 @@ body.list .pagination > li i {
     padding: 0 3px;
 }
 
+body.list td.image img {
+    max-height: 50px;
+    max-width: 150px;
+}
+
 /* -------------------------------------------------------------------------
    NEW PAGE
    ------------------------------------------------------------------------- */
@@ -634,12 +659,17 @@ body.show .form-control {
     border: 0;
     border-radius: 0;
     box-shadow: none;
+    height: auto;
 }
 body.show .form-control.text {
     height: auto;
     min-height: 34px;
     max-height: 250px;
     overflow-y: auto;
+}
+body.show .form-control.image {
+    max-height: 300px;
+    max-width: 100%;
 }
 
 /* -------------------------------------------------------------------------
@@ -896,8 +926,8 @@ body.error code {
         display: block;
         font-size: 16px;
         font-weight: 500;
-        line-height: 2.5;
-        padding: 0;
+        line-height: 1.4;
+        padding: 0.65em 0;
         text-align: left;
         -moz-transition: padding-left .1s ease-out 0s;
         -webkit-transition: padding-left .1s ease-out;

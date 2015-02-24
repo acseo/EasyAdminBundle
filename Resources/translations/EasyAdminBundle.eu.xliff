@@ -58,6 +58,10 @@
                 <source>paginator.counter</source>
                 <target><![CDATA[<strong>%start%</strong>tik - <strong>%end%</strong>era <strong>%results%</strong>tik]]></target>
             </trans-unit>
+            <trans-unit id="actions.cancel">
+                <source>actions.cancel</source>
+                <target>Ezeztatu</target>
+            </trans-unit>
             <trans-unit id="actions.list">
                 <source>actions.list</source>
                 <target>Zerrenda</target>
@@ -84,11 +88,19 @@
             </trans-unit>
             <trans-unit id="list.results_found">
                 <source>list.results_found</source>
-                <target><![CDATA[{1} Emaitza <strong>1</strong> |]1,Inf] <strong>%count%</strong> emaitza]]></target>
+                <target><![CDATA[{0} Ez da emaitzarik topatu|{1} Emaitza <strong>1</strong> |]1,Inf] <strong>%count%</strong> emaitza]]></target>
             </trans-unit>
             <trans-unit id="list.search">
                 <source>list.search</source>
                 <target>Bilatu</target>
+            </trans-unit>
+            <trans-unit id="delete_modal.title">
+                <source>delete_modal.title</source>
+                <target>Ziur zaude elementu hau ezabatu nahi duzula?</target>
+            </trans-unit>
+            <trans-unit id="delete_modal.content">
+                <source>delete_modal.content</source>
+                <target>Ekintza hau ezin da desegin.</target>
             </trans-unit>
         </body>
     </file>
