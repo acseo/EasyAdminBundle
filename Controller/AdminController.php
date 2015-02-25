@@ -389,6 +389,14 @@ class AdminController extends Controller
                 }
             }
 
+            if (isset($metadata["options"])) {
+                if (isset($metadata["options"]["type"])) {
+                    $metadata["options"]["type"] = new $metadata["options"]["type"]();
+                }
+                $formFieldOptions = array_merge($formFieldOptions, $metadata["options"]);
+            }
+
+            //var_dump($formFieldOptions);
             $form->add($name, $metadata['type'], $formFieldOptions);
         }
 
